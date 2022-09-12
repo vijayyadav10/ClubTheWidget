@@ -1,0 +1,6 @@
+#!/bin/bash
+
+ent bundle build --all
+ent bundle pack
+ent bundle publish
+ent bundle generate-cr --image vijayhyadav/clubthewidget | ent k apply -n entando -f -
